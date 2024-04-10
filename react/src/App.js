@@ -25,7 +25,7 @@ class App extends React.Component {
             result_connection: "",
             color: {
                 "theme": "dark",
-                "background": "#1D1D1D",
+                "background": "bg-[#1D1D1D]",
                 "menu_background": "bg-white",
                 "search": "#8E8E8E",
                 "default_text_color_in_search": "gray-700",
@@ -84,7 +84,7 @@ class App extends React.Component {
             this.setState({
                 color: {
                     "theme": "white",
-                    "background": "white",
+                    "background": "bg-[#ffffff]",
                     "menu_background": "bg-black",
                     "search": "#7C7C7C",
                     "default_text_color_in_search": "[#1D1D1D]",
@@ -104,7 +104,7 @@ class App extends React.Component {
             this.setState({
                 color: {
                     "theme": "dark",
-                    "background": "#1D1D1D",
+                    "background": "bg-[#1D1D1D]",
                     "menu_background": "bg-white",
                     "search": "#8E8E8E",
                     "default_text_color_in_search": "gray-700",

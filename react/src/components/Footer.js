@@ -2,7 +2,7 @@ import React from "react";
 
 class Footer extends React.Component{
     render() {
-        return (<footer className={`bg-[${this.props.color["background"]}] h-[180px] flex align-middle justify-between fixed bottom-0 left-0 w-[100%] pl-[130px] pr-[130px] text-[#8E8E8E]`}>
+        return (<footer className={`${this.props.color["background"]} h-[180px] flex align-middle justify-between fixed bottom-0 left-0 w-[100%] pl-[130px] pr-[130px] text-[#8E8E8E]`}>
 
             <div className="footer-left-side w-[500px] pt-[64px]">
                 <p>61070, Харьков, ул. Чкалова 17,</p>
