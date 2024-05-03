@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Calculator from "./components/Calculator";
 import axios from "axios";
 
 import lupa_white from './img/lupa_white.png';
@@ -16,6 +17,13 @@ import instagram from './img/instagram.png';
 import facebook from './img/facebook.png';
 import phone from './img/phone.png';
 import mail from './img/mail.png';
+import Information from "./components/Information";
+import Map from "./components/Map";
+import Specialties from "./components/Specialties";
+import Conditions from "./components/Conditions";
+import Сommunication from "./components/Сommunication";
+import TimeLine from "./components/TimeLine";
+
 
 class App extends React.Component {
     constructor(props) {
@@ -46,14 +54,41 @@ class App extends React.Component {
         this.inputClick = this.inputClick.bind(this)
         this.changeColor = this.changeColor.bind(this)
         this.connect = this.connect.bind(this)
+        this.sendDataForCalculate = this.sendDataForCalculate.bind(this)
+        this.onInputChange = this.onInputChange.bind(this);
+    }
+
+    onInputChange(name, value) {
+        console.log(`Поле ${name} было изменено. Новое значение: ${value}`);
+        // Здесь вы можете выполнить любую логику, связанную с изменением полей ввода
+    }
+
+    sendDataForCalculate(data) {
+        // В этом методе вы можете отправить данные на сервер
+        // Например, используя axios.post
+        // axios.post('/calculate', data)
+        //     .then(response => {
+        //         // Обработка успешного ответа
+        //     })
+        //     .catch(error => {
+        //         // Обработка ошибки
+        //     });
+        console.log('Отправляем данные:', data);
     }
 
     render() {
-        return (<div>
+        return (<div className="text-[#8E8E8E]">
             <Header changeColor={this.changeColor} color={this.state.color}/>
-            <h1>{this.state.helpText}</h1>
-            <h2>{this.state.userData}</h2>
-            <button onClick={this.connect}>Click for testing backend connection: {this.state.result_connection}</button>
+            <div className={`${this.state.color["background"]} h-[50px]`}></div>
+            <main className={`${this.state.color["background"]}`}>
+                <Specialties/>
+                <Conditions/>
+                <TimeLine/>
+                <Calculator sendDataForCalculate={this.sendDataForCalculate} onInputChange={this.onInputChange}/>
+                <Сommunication/>
+                <Information/>
+                <Map/>
+            </main>
             <Footer color={this.state.color}/>
         </div>)
     }

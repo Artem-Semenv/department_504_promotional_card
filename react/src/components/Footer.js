@@ -2,7 +2,7 @@ import React from "react";
 
 class Footer extends React.Component{
     render() {
-        return (<footer className={`${this.props.color["background"]} h-[180px] flex align-middle justify-between fixed bottom-0 left-0 w-[100%] pl-[130px] pr-[130px] text-[#8E8E8E]`}>
+        return (<footer className={`${this.props.color["background"]} h-[180px] flex align-middle justify-between bottom-0 left-0 w-[100%] pl-[130px] pr-[130px] text-[#8E8E8E]`}>
 
             <div className="footer-left-side w-[500px] pt-[64px]">
                 <p>61070, Харьков, ул. Чкалова 17,</p>
@@ -14,13 +14,20 @@ class Footer extends React.Component{
                 <p className="mt-[22px] mb-[22px]">© DICT. All rights reserved. </p>
                 <div className="flex justify-around">
                     <button className="telegram">
-                        <img className="w-[50px]" src={this.props.color["telegram"]} alt=""/>
+                        <div className="border-[#8E8E8E] border-2 p-2 rounded-full">
+                            <img className="w-[30px] " src={this.props.color["telegram"]} alt=""/>
+                        </div>
                     </button>
                     <button className="instagram">
-                        <img className="w-[50px]" src={this.props.color["instagram"]} alt=""/>
+                        <div className="border-[#8E8E8E] border-2 p-2 rounded-full">
+                            <img className="w-[30px]" src={this.props.color["instagram"]} alt=""/>
+                        </div>
+
                     </button>
                     <button className="facebook">
-                        <img className="w-[50px]" src={this.props.color["facebook"]} alt=""/>
+                        <div className="border-[#8E8E8E] border-2 p-2 rounded-full">
+                            <img className="w-[30px]" src={this.props.color["facebook"]} alt=""/>
+                        </div>
                     </button>
                 </div>
             </div>
