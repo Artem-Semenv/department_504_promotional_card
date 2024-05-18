@@ -2,12 +2,12 @@ import React from "react";
 
 class Footer extends React.Component{
     render() {
-        return (<footer className={`${this.props.color["background"]} h-[180px] flex align-middle justify-between bottom-0 left-0 w-[100%] pl-[130px] pr-[130px] text-[#8E8E8E]`}>
+        return (<footer className={`${this.props.color["background"]} h-[180px] flex justify-around bottom-0 left-0 w-[100%] text-[#8E8E8E]`}>
 
-            <div className="footer-left-side w-[500px] pt-[64px]">
-                <p>61070, Харьков, ул. Чкалова 17,</p>
-                <p>НАУ им. Н.Е.Жуковского ”ХАИ”</p>
-                <p>Кафедра информационно-коммуникационных технологий №504</p>
+            <div className="footer-left-side w-[350px] pt-[64px] jus">
+                <p>{this.props.t("street")}</p>
+                <p>{this.props.t("university")}</p>
+                <p>{this.props.t("department")}</p>
             </div>
             <div className="footer-center-side flex-col items-center w-[250px] text-center">
                 <img className="department-img h-[30px] m-auto mt-[29px]" src={this.props.color["dict"]} alt=""/>
@@ -31,7 +31,7 @@ class Footer extends React.Component{
                     </button>
                 </div>
             </div>
-            <div className="footer-right-side w-[500px] flex justify-end ">
+            <div className="footer-right-side w-[350px] flex justify-end ">
                 <div className="contacts my-auto">
                     <div className="phone flex mb-[39px]">
                         <img src={this.props.color["phone"]} className="w-[30px] h-[30px] mr-3 m-auto" alt=""/>

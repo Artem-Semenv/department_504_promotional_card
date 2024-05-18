@@ -2,6 +2,8 @@ import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Calculator from "./components/Calculator";
+import i18n from './i18n';
+import { withTranslation } from 'react-i18next';
 import axios from "axios";
 
 import lupa_white from './img/lupa_white.png';
@@ -21,7 +23,7 @@ import Information from "./components/Information";
 import Map from "./components/Map";
 import Specialties from "./components/Specialties";
 import Conditions from "./components/Conditions";
-import Сommunication from "./components/Сommunication";
+import Communication from "./components/Сommunication";
 import TimeLine from "./components/TimeLine";
 
 
@@ -29,7 +31,7 @@ class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            helpText: "Help text!",
+            language: "EN",
             result_connection: "",
             color: {
                 "theme": "dark",
@@ -48,19 +50,25 @@ class App extends React.Component {
                 "phone":phone,
                 "mail":mail
             },
-            userData: ""
-        }
+            userData: "",
 
-        this.inputClick = this.inputClick.bind(this)
+        }
+        this.scrollToRefConditions = React.createRef();
         this.changeColor = this.changeColor.bind(this)
         this.connect = this.connect.bind(this)
         this.sendDataForCalculate = this.sendDataForCalculate.bind(this)
         this.onInputChange = this.onInputChange.bind(this);
+        this.changeLanguage = this.changeLanguage.bind(this);
     }
+
+    scrollToConditions = () => {
+        this.scrollToRefConditions.current.scrollIntoView({ behavior: "smooth" });
+    };
+
+
 
     onInputChange(name, value) {
         console.log(`Поле ${name} было изменено. Новое значение: ${value}`);
-        // Здесь вы можете выполнить любую логику, связанную с изменением полей ввода
     }
 
     sendDataForCalculate(data) {
@@ -77,20 +85,34 @@ class App extends React.Component {
     }
 
     render() {
-        return (<div className="text-[#8E8E8E]">
-            <Header changeColor={this.changeColor} color={this.state.color}/>
+        const { t} = this.props;
+
+        return (<div  className={`${this.state.color["background"]} w-full text-[#8E8E8E]`}>
+            <Header changeColor={this.changeColor} color={this.state.color}  scrollToConditions={this.scrollToConditions}
+                    changeLanguage={this.changeLanguage} language={this.state.language} />
             <div className={`${this.state.color["background"]} h-[50px]`}></div>
-            <main className={`${this.state.color["background"]}`}>
-                <Specialties/>
-                <Conditions/>
-                <TimeLine/>
-                <Calculator sendDataForCalculate={this.sendDataForCalculate} onInputChange={this.onInputChange}/>
-                <Сommunication/>
-                <Information/>
+            <main >
+                <Specialties t={t}/>
+                <Conditions scrollToRefConditions={this.scrollToRefConditions} t={t}/>
+                <TimeLine t={t}/>
+                <Calculator t={t} sendDataForCalculate={this.sendDataForCalculate} onInputChange={this.onInputChange}/>
+                <Communication t={t}/>
+                <Information t={t}/>
                 <Map/>
             </main>
-            <Footer color={this.state.color}/>
+            <Footer t={t} color={this.state.color}/>
         </div>)
+    }
+
+    changeLanguage(language) {
+        const { i18n } = this.props;
+        i18n.changeLanguage(language);
+
+        const languages = {"UK": "EN", "EN": "UK"}
+
+        this.setState({
+            language: languages[this.state.language]
+        })
     }
 
     connect(){
@@ -102,19 +124,7 @@ class App extends React.Component {
         })
     }
 
-    inputClick() {
-        this.setState({
-            helpText: "Change"
-        })
-        console.log("Clicked")
-    }
-
-    mouseOver() {
-        console.log("Mouse Over")
-    }
-
     changeColor() {
-        console.log("awff")
         if (this.state.color["theme"] === "dark"){
             this.setState({
                 color: {
@@ -160,4 +170,4 @@ class App extends React.Component {
     }
 }
 
-export default App
+export default withTranslation()(App)

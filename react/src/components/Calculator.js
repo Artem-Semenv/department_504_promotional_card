@@ -49,10 +49,8 @@ class Calculator extends React.Component{
     handleBlur(event) {
         const { name, value } = event.target;
 
-        if (!value.trim()) {
-            this.setState(prevState => ({ filledFields: prevState.filledFields - 1 }));
-        } else if (this.state[name] !== value) {
-            this.setState(prevState => ({ filledFields: prevState.filledFields + 1 }));
+        if (value.trim()) {
+            this.setState(prevState => ({filledFields: prevState.filledFields + 1}));
         }
     }
 
@@ -75,52 +73,42 @@ class Calculator extends React.Component{
             <p>filledFields: {filledFields}</p>
             <Chance/>
             <form onSubmit={this.handleSubmit} className="h-[400px] flex flex-col items-center">
-                <p className="text-3xl font-bold mb-10">Ваші бали НМТ 100..200</p>
+                <p className="text-3xl font-bold mb-10">{this.props.t("scores")}</p>
                 <div className="flex">
                     <div className="mr-28">
-                        <div className="mb-5 w-[250px]">
-                            <input type="text" id="ukrainian" name="field1" value={this.state.field1} onChange={this.handleChange} onBlur={this.handleBlur} disabled={remainingFieldsDisabled}
-                                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                   placeholder="Українська мова" required/>
+                        <div className="mb-5 w-[300px]">
+                            <input type="text" id="ukrainian" name="field1" value={this.state.field1} onChange={this.handleChange} onBlur={this.handleBlur} disabled={this.state.field1 !== "" && remainingFieldsDisabled}
+                                   className="h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                   placeholder={this.props.t("ukrainian")} required/>
                         </div>
-                        <div className="mb-5 w-[250px]">
-                            <input type="text" id="foreignLanguage" name="field2" value={this.state.field2} onChange={this.handleChange} onBlur={this.handleBlur} disabled={remainingFieldsDisabled}
-                                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                   placeholder="Іноземна мова" required/>
-                        </div>
-                        <div className="mb-5 w-[250px]">
-                            <input type="text" id="biology" name="field3"  value={this.state.field3} onChange={this.handleChange} onBlur={this.handleBlur} disabled={remainingFieldsDisabled}
-                                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                   placeholder="Біологія" required/>
-                        </div>
-                        <div className="mb-5 w-[250px]">
-                            <input type="text" id="chemistry" name="field4" value={this.state.field4} onChange={this.handleChange} onBlur={this.handleBlur} disabled={remainingFieldsDisabled}
-                                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                   placeholder="Хімія" required/>
+                        <div className="mb-5 w-[300px]">
+                            <input type="text" id="foreignLanguage" name="field2" value={this.state.field2} onChange={this.handleChange} onBlur={this.handleBlur} disabled={this.state.field2 !== "" && remainingFieldsDisabled}
+                                   className="h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                   placeholder={this.props.t("foreign")} required/>
                         </div>
                     </div>
                     <div>
-                        <div className="mb-5 w-[250px]">
-                            <input type="text" id="mathematics" name="field5" value={this.state.field5} onChange={this.handleChange} onBlur={this.handleBlur} disabled={remainingFieldsDisabled}
-                                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                   placeholder="Математика" required/>
+                        <div className="mb-5 w-[300px]">
+                            <input type="text" id="mathematics" name="field5" value={this.state.field5} onChange={this.handleChange} onBlur={this.handleBlur} disabled={this.state.field5 !== "" && remainingFieldsDisabled}
+                                   className="h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                   placeholder={this.props.t("math")} required/>
                         </div>
-                        <div className="mb-5 w-[250px]">
-                            <input type="text" id="physics" name="field6" value={this.state.field6} onChange={this.handleChange} onBlur={this.handleBlur} disabled={remainingFieldsDisabled}
-                                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                   placeholder="Фізика" required/>
+                        <div className="mb-5 w-[300px]">
+                            <input type="text" id="physics" name="field6" value={this.state.field6} onChange={this.handleChange} onBlur={this.handleBlur} disabled={this.state.field6 !== "" && remainingFieldsDisabled}
+                                   className="h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                   placeholder={this.props.t("physics")} required/>
                         </div>
-                        <div className="mb-5 w-[250px]">
-                            <input type="text" id="ukrainianHistory" name="field7" value={this.state.field7} onChange={this.handleChange} onBlur={this.handleBlur} disabled={remainingFieldsDisabled}
-                                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                   placeholder="Історія України" required/>
+                        <div className="mb-5 w-[300px]">
+                            <input type="text" id="ukrainianHistory" name="field7" value={this.state.field7} onChange={this.handleChange} onBlur={this.handleBlur} disabled={this.state.field7 !== "" && remainingFieldsDisabled}
+                                   className="h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                   placeholder={this.props.t("history")} required/>
                         </div>
                     </div>
                 </div>
 
-                <div className="flex flex-col items-center">
+                <div  className="flex flex-col items-center">
                     <button type="submit"
-                            className="text-white bg-[#FF3A3A] hover:bg-blue-800 font-medium text-sm w-full px-5 py-2.5 text-center">Розрахувати
+                            className="text-white bg-[#FF3A3A] hover:bg-white hover:text-[#FF3A3A] font-medium text-[18px] w-[200px] h-[50px] px-5 py-2.5 text-center">{this.props.t("calculate")}
                     </button>
                 </div>
 

@@ -5,7 +5,7 @@ class Communication extends React.Component {
 
 
         return (
-            <div id="communication">
+            <div>
                 <div className="text-center m-8">
                     <p className="text-6xl font-bold"> Як дізнатися про свої шанси щодо вступу</p>
                 </div>
