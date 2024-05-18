@@ -35,6 +35,18 @@ return [
 
     'connections' => [
 
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'host' => env('DB_HOST'),
+            'port' => env('DB_PORT'),
+            'database' => env('DB_DATABASE'),
+//            'username' => env('DB_USERNAME', 'homestead'),
+//            'password' => env('DB_PASSWORD', 'secret'),
+//            'options' => [
+//                'appname' => 'homestead',
+//            ],
+        ],
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
