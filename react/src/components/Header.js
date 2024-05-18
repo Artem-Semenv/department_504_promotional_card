@@ -76,8 +76,12 @@ class Header extends React.Component {
 
     scrollToSection(sectionId)  {
         const section = document.getElementById(sectionId);
-        alert(section)
-        section.scrollIntoView({ behavior: 'smooth' });
+        const offset = 60; // Ваше желаемое смещение в пикселях
+        const newPosition = section.offsetTop - offset;
+        window.scrollTo({
+            top: newPosition,
+            behavior: "smooth"
+        })
     };
 
     componentDidMount() {
@@ -103,8 +107,6 @@ class Header extends React.Component {
     render() {
         const { searchQuery } = this.state;
 
-        // Определяем классы для меню в зависимости от состояния
-
         const menuClasses = this.state.isMenuOpen ? 'block' : 'hidden';
 
         return (
@@ -126,28 +128,10 @@ class Header extends React.Component {
 
                 <div className="grow"></div>
                 <div className="flex-none left-side m-auto mr-10 flex align-middle">
-                    <form className="w-full max-w-sm">
-                        <div className={`flex items-center border-b border-[${this.props.color["search"]}] py-2`}>
-                            <input
-                                className={`appearance-none bg-transparent border-none w-full text-${this.props.color["default_text_color_in_search"]} mr-3 py-1 px-2 leading-tight focus:outline-none`}
-                                type="text" placeholder="Jane Doe" aria-label="Full name"
-                                ref={this.searchInputRef} // Привязываем input к ref для фокуса
-                                value={searchQuery}
-                                onChange={this.handleSearchChange}
-                            />
-                            <button className="w-[20px] h-[20px]" type="button">
-                                <img src={this.props.color["lupa"]} alt=''/>
-                            </button>
-                        </div>
-                    </form>
-                    <button onClick={() => this.props.changeColor()} className="light-or-dark m-auto w-[35px] h-[35px] ml-[60px]">
-                        <img src={this.props.color["switch"]} alt=''/>
+                    <button onClick={this.props.changeColor} className="light-or-dark m-auto w-[35px] h-[35px] ml-[60px]">
+                        <img className="h-[20px]" src={this.props.color["switch"]} alt=''/>
                     </button>
-                    <button className={`language ml-[60px] text-${this.props.color["language_text_color"]}`} src="" alt="">RU</button>
-                    <button className="w-[35px] h-[35px] m-auto ml-[60px]" src="" alt="">
-                        <img src={this.props.color["exit"]} alt=''/>
-                    </button>
-
+                    <button onClick={() => this.props.changeLanguage(this.props.language.toLowerCase())} className={`language ml-[60px] text-${this.props.color["language_text_color"]}`} src="" alt="">{this.props.language}</button>
                 </div>
             </header>
         )

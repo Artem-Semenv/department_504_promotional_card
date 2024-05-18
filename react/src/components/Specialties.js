@@ -26,24 +26,24 @@ class Specialties extends React.Component {
         };
 
         const items = [
-            "Машинне навчання та аналіз даних: Pandas, Scikit-learn, Keras, TensorFlow, PyTorch, постійне вивчання і використання Python впродовж 4-х курсів",
-            "Інтелектуальна обробка мультимедіа: участь у практичних проектах кафедри, яка має потужну наукову школу",
-            "Full-stack Web-програмування: Front-end (HTML/CSS/React), Back-end (Flask/Django, Spring/Micronaut), бази даних (PostgreSQL, MySQL, MongoDB, Redis)",
-            "DevOps (адміністрування UNIX/Linux, CI/CD)"
+            this.props.t("first_type_info_3"),
+            this.props.t("first_type_info_4"),
+            this.props.t("first_type_info_5"),
+            this.props.t("first_type_info_6")
         ];
 
         const items2 = [
-            "Мережева інженерія (повний спектр курсів академії Cisco): компютерні мережі, інтернет речей, кібербезпека, системне, адміністрування",
-            "Бездротові технології (SDR, IoT, мобільні системи 5G)",
-            "Програмування на Python, Java/Kotlin, JavaScript, C/C++",
-            "Інфокомунікаційні системи (Full-Stack Web-програмування: Front-end і Back-end, розробка Android-додатків)"
+            this.props.t("second_type_info_3"),
+            this.props.t("second_type_info_4"),
+            this.props.t("second_type_info_5"),
+            this.props.t("second_type_info_6")
         ];
 
         const items3 = [
-            "Мережева інженерія (повний спектр курсів академії Cisco): компютерні мережі, інтернет речей, кібербезпека, системне, адміністрування",
-            "Бездротові технології (SDR, IoT, мобільні системи 5G)",
-            "Програмування на Python, Java/Kotlin, JavaScript, C/C++",
-            "Інфокомунікаційні системи (Full-Stack Web-програмування: Front-end і Back-end, розробка Android-додатків)"
+            this.props.t("third_type_info_3"),
+            this.props.t("third_type_info_4"),
+            this.props.t("third_type_info_5"),
+            this.props.t("third_type_info_6")
         ];
 
         const containerStyle = {
@@ -61,21 +61,21 @@ class Specialties extends React.Component {
         return (
             <div id="specialties">
                 <div className="text-center p-6">
-                    <p className="text-6xl font-bold"> Спеціальності</p>
+                    <p className="text-6xl font-bold"> {this.props.t("specialties")} </p>
                 </div>
 
                 <div className="mr-28 ml-28 text-2xl">
-                    <p className="m-6">Кафедра інформаційно-комунікаційних технологій імені О. О. Зеленського спеціалізується на підготовці фахівців в області мережевих, програмних та інформаційних технологій за двома напрямками 172 - Електронні комунікації та радіотехніка і 126 - Інформаційні системи та технології.</p>
-                    <p className="m-6">Навчання студентів здійснюється в рамках наступних освітніх програм:</p>
+                    <p className="m-6">{this.props.t("specialties_info_1")}</p>
+                    <p className="m-6">{this.props.t("specialties_info_2")}</p>
                 </div>
 
                 <div>
                     <div className="text-center text-red-600 text-3xl m-9">
-                        ШТУЧНИЙ ІНТЕЛЕКТ ТА ІНФОРМАЦІЙНІ СИСТЕМИ
+                        {this.props.t("first_type_specialties")}
                     </div>
                     <div className="mr-28 ml-28 text-2xl">
-                        <p className="m-6">(В рамках спеціальності 126 «Інформаційні системи і технології»)</p>
-                        <p className="m-6">Являє собою симбіоз напрямку розробки мобільних і Web інформаційних систем та використання машинного навчання і елементів штучного інтелекту при обробці даних. Основні технології і напрями навчання:</p>
+                        <p className="m-6">{this.props.t("first_type_info_1")}</p>
+                        <p className="m-6">{this.props.t("first_type_info_2")}</p>
                         <ul className="ml-2" style={listStyle}>
                             {items.map((item, index) => (
                                 <li className="m-5" key={index} style={listItemStyle}>
@@ -89,11 +89,11 @@ class Specialties extends React.Component {
 
                 <div>
                     <div className="text-center text-red-600 text-3xl m-9">
-                        ІНЖИНІРИНГ І ПРОГРАМУВАННЯ ІНФОКОМУНІКАЦІЙНИХ СИСТЕМ
+                        {this.props.t("second_type_specialties")}
                     </div>
                     <div className="mr-28 ml-28 text-2xl">
-                        <p className="m-6">(В рамках спеціальності 172 «Електронні комунікації та радіотехніка»)</p>
-                        <p className="m-6">Орієнтована на проектування телекомунікаційних та інформаційно-комунікаційних систем і на програмування мережевих додатків для створення інформаційних систем та сервісів. Основні технології і напрями навчання:</p>
+                        <p className="m-6">{this.props.t("second_type_info_1")}</p>
+                        <p className="m-6">{this.props.t("second_type_info_2")}</p>
                         <ul className="ml-2" style={listStyle}>
                             {items2.map((item, index) => (
                                 <li className="m-5" key={index} style={listItemStyle}>
@@ -107,11 +107,11 @@ class Specialties extends React.Component {
 
                 <div>
                     <div className="text-center text-red-600 text-3xl m-9">
-                        КОМП'ЮТЕРНИЙ ЗІР: НЕЙМОВІРНІ МОЖЛИВОСТІ!
+                        {this.props.t("third_type_specialties")}
                     </div>
                     <div className="mr-28 ml-28 text-2xl">
-                        <p className="m-6">Завжди цікаво, що ж ховається за дивовижними словами "комп'ютерний зір"? Зараз ви зможете побачити це на власні очі!</p>
-                        <p className="m-6">У цьому відео ви побачите як алгоритми комп'ютерного зору можуть:</p>
+                        <p className="m-6">{this.props.t("third_type_info_1")}</p>
+                        <p className="m-6">{this.props.t("third_type_info_2")}</p>
                         <ul className="ml-2" style={listStyle}>
                             {items3.map((item, index) => (
                                 <li className="m-5" key={index} style={listItemStyle}>
@@ -120,8 +120,8 @@ class Specialties extends React.Component {
                                 </li>
                             ))}
                         </ul>
-                        <p className="m-6">І це лише один із прикладів того, що можна зробити за допомогою комп'ютерного зору!</p>
-                        <p className="m-6">Ми запрошуємо вас долучитися до світу новітніх технологій та стати частиною команди, яка розробляє такі вражаючі алгоритми.</p>
+                        <p className="m-6">{this.props.t("third_type_info_7")}</p>
+                        <p className="m-6">{this.props.t("third_type_info_8")}</p>
                     </div>
                 </div>
 

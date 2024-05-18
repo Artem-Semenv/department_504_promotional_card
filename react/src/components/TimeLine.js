@@ -4,7 +4,7 @@ class TimeLine extends React.Component {
     render() {
 
         return (
-            <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+            <section className="relative min-h-screen h-[1400px] flex flex-col justify-center overflow-hidden">
                 <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
                     <div className="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-16">
 
@@ -27,8 +27,8 @@ class TimeLine extends React.Component {
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 h-[130px] rounded content-center border border-slate-200 shadow">
                                         <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900 w-[250px]">Реєстрація електронних кабінетів вступників та завантаження додатків до документів</div>
-                                            <time className="text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">01.07-30.11</time>
+                                            <div className="text-slate-900 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_1")}</div>
+                                            <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">01.07-30.11</time>
                                         </div>
                                     </div>
                                 </div>
@@ -46,8 +46,8 @@ class TimeLine extends React.Component {
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white h-[130px] p-4 content-center rounded border border-slate-200 shadow">
                                         <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900  w-[250px]">Індивідуальна усна співбесіда</div>
-                                            <time className="text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">07.07-31.07</time>
+                                            <div className="text-slate-900  md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_2")}</div>
+                                            <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">07.07-31.07</time>
                                         </div>
                                     </div>
                                 </div>
@@ -65,8 +65,8 @@ class TimeLine extends React.Component {
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 h-[130px] content-center rounded border border-slate-200 shadow">
                                         <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900 w-[250px]">Прийом заяв та документів</div>
-                                            <time className="text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">19.07-31.07</time>
+                                            <div className="text-slate-900 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_3")}</div>
+                                            <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">19.07-31.07</time>
                                         </div>
                                     </div>
                                 </div>
@@ -84,8 +84,8 @@ class TimeLine extends React.Component {
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 h-[130px] rounded content-center border border-slate-200 shadow">
                                         <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900 w-[250px]">Оприлюднення рейтингових списків рекомендованих до зарахування за кошти державного бюджету</div>
-                                            <time className="text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">05.08 12:00</time>
+                                            <div className="text-slate-900 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_4")}</div>
+                                            <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">05.08 12:00</time>
                                         </div>
                                     </div>
                                 </div>
@@ -103,8 +103,8 @@ class TimeLine extends React.Component {
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 h-[130px] rounded content-center border border-slate-200 shadow">
                                         <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900 w-[250px]">Закінчення строку виконання вимог до зарахування вступниками для навчання за кошти державного бюджету</div>
-                                            <time className="text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg"> 08.08 18:00</time>
+                                            <div className="text-slate-900 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_5")}</div>
+                                            <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg"> 08.08 18:00</time>
                                         </div>
                                     </div>
                                 </div>
@@ -122,8 +122,8 @@ class TimeLine extends React.Component {
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 h-[130px] content-center rounded border border-slate-200 shadow">
                                         <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900 w-[250px] ">Зарахування вступників на навчання за кошти державного бюджету</div>
-                                            <time className="text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">05.08 12:00</time>
+                                            <div className="text-slate-900 md:w-[200px] lg:w-[250px] ">{this.props.t("timeline_info_6")}</div>
+                                            <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">05.08 12:00</time>
                                         </div>
                                     </div>
                                 </div>
@@ -141,8 +141,8 @@ class TimeLine extends React.Component {
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded content-center h-[130px] border border-slate-200 shadow">
                                         <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900 w-[250px]">Переведення на вакантні місця державного замовлення</div>
-                                            <time className="text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">19.07-31.07</time>
+                                            <div className="text-slate-900 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_7")}</div>
+                                            <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">19.07-31.07</time>
                                         </div>
                                     </div>
                                 </div>
@@ -160,8 +160,8 @@ class TimeLine extends React.Component {
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded content-center h-[130px] border border-slate-200 shadow">
                                         <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900 w-[250px]">Зарахування вступників на навчання за кошти фізичних та юридичних осіб</div>
-                                            <time className="text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">05.08 12:00</time>
+                                            <div className="text-slate-900 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_8")}</div>
+                                            <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">05.08 12:00</time>
                                         </div>
                                     </div>
                                 </div>
