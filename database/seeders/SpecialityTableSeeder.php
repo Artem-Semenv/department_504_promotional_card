@@ -34,7 +34,9 @@ class SpecialityTableSeeder extends Seeder
                     )
                 ],[
                     'number' => 126,
-                    'name' => 'Інформаційні системи та технології',
+                    'name' => array(
+                        'ukr' => "Інформаційні системи та технології",
+                        'eng' => "Information systems and technologies"),
                     'description' => array(
                         'ukr' => "Симбіоз штучного інтелекту та інформаційних систем: Web-програмування з елементами машинного навчання або штучний інтелект який підкоряє собі мережі і комп'ютерні системи? Унікальна освітня програма, що поєднує в собі постійне програмування на Python, Java/Kotlin, JavaScript, C/C++ і роботу над крутими проєктами. Ми посилено викладаємо Web-програмування в усіх його проявах: Front-end - HTML/CSS, React; Back-end - Spring, Flask/Django; бази даних - PostgreSQL, MongoDB, Redis; і авжеж не забуваємо про мережі! Поглиблено вивчаються сучасні методи і інструменти машинного навчання (Pandas, Scikit-learn, Keras, TensorFlow, PyTorch) в обробці мультимедійних даних і не тільки. Підтвердженням вищесказаного є простий факт - даний сайт і Telegram-бот є нашою розробкою. D://CT :)",
                         'eng' => "Symbiosis of artificial intelligence and information systems: Web programming with elements of machine learning or artificial intelligence that takes over networks and computer systems? A unique educational program that combines ongoing programming in Python, Java/Kotlin, JavaScript, C/C++, and work on cool projects. We teach Web programming in all its manifestations: Front-end - HTML/CSS, React; Back-end - Spring, Flask/Django; databases - PostgreSQL, MongoDB, Redis; and of course, we don't forget about networks! In-depth study of modern methods and tools of machine learning (Pandas, Scikit-learn, Keras, TensorFlow, PyTorch) in processing multimedia data and more. The above is confirmed by the simple fact that this website and Telegram bot are developed by us. D://CT :)"

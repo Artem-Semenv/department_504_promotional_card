@@ -26,8 +26,8 @@ class TimeLine extends React.Component {
                                     </div>
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 h-[130px] rounded content-center border border-slate-200 shadow">
-                                        <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_1")}</div>
+                                        <div className="md:flex text-center md:text-left md:items-center md:justify-between md:space-x-2 md:mb-1">
+                                            <div className="text-slate-900 mb-6 md:mb-0 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_1")}</div>
                                             <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">01.07-30.11</time>
                                         </div>
                                     </div>
@@ -45,8 +45,8 @@ class TimeLine extends React.Component {
                                     </div>
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white h-[130px] p-4 content-center rounded border border-slate-200 shadow">
-                                        <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900  md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_2")}</div>
+                                        <div className="md:flex text-center md:text-left md:items-center md:justify-between md:space-x-2 md:mb-1">
+                                            <div className="text-slate-900 mb-6 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_2")}</div>
                                             <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">07.07-31.07</time>
                                         </div>
                                     </div>
@@ -64,8 +64,8 @@ class TimeLine extends React.Component {
                                     </div>
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 h-[130px] content-center rounded border border-slate-200 shadow">
-                                        <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_3")}</div>
+                                        <div className="md:flex text-center md:text-left md:items-center md:justify-between md:space-x-2 md:mb-1">
+                                            <div className="text-slate-900 mb-6 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_3")}</div>
                                             <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">19.07-31.07</time>
                                         </div>
                                     </div>
@@ -83,8 +83,8 @@ class TimeLine extends React.Component {
                                     </div>
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 h-[130px] rounded content-center border border-slate-200 shadow">
-                                        <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_4")}</div>
+                                        <div className="md:flex text-center md:text-left md:items-center md:justify-between md:space-x-2 md:mb-1">
+                                            <div className="text-slate-900 mb-6 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_4")}</div>
                                             <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">05.08 12:00</time>
                                         </div>
                                     </div>
@@ -102,8 +102,8 @@ class TimeLine extends React.Component {
                                     </div>
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 h-[130px] rounded content-center border border-slate-200 shadow">
-                                        <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_5")}</div>
+                                        <div className="md:flex text-center md:text-left md:items-center md:justify-between md:space-x-2 md:mb-1">
+                                            <div className="text-slate-900 mb-6 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_5")}</div>
                                             <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg"> 08.08 18:00</time>
                                         </div>
                                     </div>
@@ -121,8 +121,8 @@ class TimeLine extends React.Component {
                                     </div>
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 h-[130px] content-center rounded border border-slate-200 shadow">
-                                        <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900 md:w-[200px] lg:w-[250px] ">{this.props.t("timeline_info_6")}</div>
+                                        <div className="md:flex text-center md:text-left md:items-center md:justify-between md:space-x-2 md:mb-1">
+                                            <div className="text-slate-900 mb-6 md:w-[200px] lg:w-[250px] ">{this.props.t("timeline_info_6")}</div>
                                             <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">05.08 12:00</time>
                                         </div>
                                     </div>
@@ -140,8 +140,8 @@ class TimeLine extends React.Component {
                                     </div>
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded content-center h-[130px] border border-slate-200 shadow">
-                                        <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_7")}</div>
+                                        <div className="md:flex text-center md:text-left md:items-center md:justify-between md:space-x-2 md:mb-1">
+                                            <div className="text-slate-900 mb-6 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_7")}</div>
                                             <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">19.07-31.07</time>
                                         </div>
                                     </div>
@@ -159,8 +159,8 @@ class TimeLine extends React.Component {
                                     </div>
                                     <div
                                         className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded content-center h-[130px] border border-slate-200 shadow">
-                                        <div className="flex items-center justify-between space-x-2 mb-1">
-                                            <div className="text-slate-900 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_8")}</div>
+                                        <div className="md:flex text-center md:text-left md:items-center md:justify-between md:space-x-2 md:mb-1">
+                                            <div className="text-slate-900 mb-6 md:w-[200px] lg:w-[250px]">{this.props.t("timeline_info_8")}</div>
                                             <time className="md:text-[13px] lg:text-[16px] font-medium text-white bg-[#1D1D1D] p-1 rounded-lg">05.08 12:00</time>
                                         </div>
                                     </div>
