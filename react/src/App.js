@@ -23,7 +23,6 @@ import Information from "./components/Information";
 import Map from "./components/Map";
 import Specialties from "./components/Specialties";
 import Conditions from "./components/Conditions";
-import Communication from "./components/Сommunication";
 import TimeLine from "./components/TimeLine";
 
 
@@ -88,15 +87,14 @@ class App extends React.Component {
         const { t} = this.props;
 
         return (<div  className={`${this.state.color["background"]} w-full text-[#8E8E8E]`}>
-            <Header changeColor={this.changeColor} color={this.state.color}  scrollToConditions={this.scrollToConditions}
+            <Header t={t} changeColor={this.changeColor} color={this.state.color}  scrollToConditions={this.scrollToConditions}
                     changeLanguage={this.changeLanguage} language={this.state.language} />
             <div className={`${this.state.color["background"]} h-[50px]`}></div>
             <main >
                 <Specialties t={t}/>
                 <Conditions scrollToRefConditions={this.scrollToRefConditions} t={t}/>
                 <TimeLine t={t}/>
-                <Calculator t={t} sendDataForCalculate={this.sendDataForCalculate} onInputChange={this.onInputChange}/>
-                <Communication t={t}/>
+                <Calculator t={t} language={this.state.language} sendDataForCalculate={this.sendDataForCalculate} onInputChange={this.onInputChange}/>
                 <Information t={t}/>
                 <Map/>
             </main>

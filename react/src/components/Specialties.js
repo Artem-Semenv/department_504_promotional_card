@@ -47,15 +47,15 @@ class Specialties extends React.Component {
         ];
 
         const containerStyle = {
-            display: "flex", // Устанавливаем flex-контейнер
-            justifyContent: "center", // Выравнивание по горизонтали по центру
-            alignItems: "center", // Выравнивание по вертикали по центру
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
         };
 
         const iframeStyle = {
             border: "0",
-            width: "600px", // Ширина iframe
-            height: "400px" // Высота iframe
+            width: "600px",
+            height: "400px"
         };
 
         return (
@@ -63,12 +63,10 @@ class Specialties extends React.Component {
                 <div className="text-center p-6">
                     <p className="text-6xl font-bold"> {this.props.t("specialties")} </p>
                 </div>
-
                 <div className="mr-28 ml-28 text-2xl">
                     <p className="m-6">{this.props.t("specialties_info_1")}</p>
                     <p className="m-6">{this.props.t("specialties_info_2")}</p>
                 </div>
-
                 <div>
                     <div className="text-center text-red-600 text-3xl m-9">
                         {this.props.t("first_type_specialties")}
@@ -79,14 +77,13 @@ class Specialties extends React.Component {
                         <ul className="ml-2" style={listStyle}>
                             {items.map((item, index) => (
                                 <li className="m-5" key={index} style={listItemStyle}>
-                                    <span style={triangleStyle}></span> {/* Маркер */}
-                                    {item} {/* Содержимое элемента списка */}
+                                    <span style={triangleStyle}></span>
+                                    {item}
                                 </li>
                             ))}
                         </ul>
                     </div>
                 </div>
-
                 <div>
                     <div className="text-center text-red-600 text-3xl m-9">
                         {this.props.t("second_type_specialties")}
@@ -97,14 +94,13 @@ class Specialties extends React.Component {
                         <ul className="ml-2" style={listStyle}>
                             {items2.map((item, index) => (
                                 <li className="m-5" key={index} style={listItemStyle}>
-                                    <span style={triangleStyle}></span> {/* Маркер */}
-                                    {item} {/* Содержимое элемента списка */}
+                                    <span style={triangleStyle}></span>
+                                    {item}
                                 </li>
                             ))}
                         </ul>
                     </div>
                 </div>
-
                 <div>
                     <div className="text-center text-red-600 text-3xl m-9">
                         {this.props.t("third_type_specialties")}
@@ -115,8 +111,8 @@ class Specialties extends React.Component {
                         <ul className="ml-2" style={listStyle}>
                             {items3.map((item, index) => (
                                 <li className="m-5" key={index} style={listItemStyle}>
-                                    <span style={triangleStyle}></span> {/* Маркер */}
-                                    {item} {/* Содержимое элемента списка */}
+                                    <span style={triangleStyle}></span>
+                                    {item}
                                 </li>
                             ))}
                         </ul>
@@ -124,7 +120,6 @@ class Specialties extends React.Component {
                         <p className="m-6">{this.props.t("third_type_info_8")}</p>
                     </div>
                 </div>
-
                 <div style={containerStyle}>
                     <iframe
                         width="560"
