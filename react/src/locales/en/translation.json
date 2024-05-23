@@ -68,5 +68,13 @@
     "form_data_4":"Send",
     "street":"61070, Kharkiv, str. Chkalova 17,",
     "university":"NAU named after N.E. Zhukovsky \"KHAI\"",
-    "department":"Department of Information and Communication Technologies No. 504"
+    "department":"Department of Information and Communication Technologies No. 504",
+    "program": "Training program:",
+    "long": "Duration of study:",
+    "score": "Passing score:",
+    "nav_specialties": "Specialties",
+    "nav_conditions": "Conditions of entry",
+    "nav_contact": "How to contact",
+    "wrote_data": "Your data is recorded!",
+    "close": "Close"
 }

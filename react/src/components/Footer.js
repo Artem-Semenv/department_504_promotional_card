@@ -13,21 +13,21 @@ class Footer extends React.Component {
                     <img className="department-img h-[30px] m-auto mt-[29px]" src={this.props.color["dict"]} alt=""/>
                     <p className="mt-[22px] mb-[22px]">© DICT. All rights reserved.</p>
                     <div className="flex justify-around">
-                        <button className="telegram">
+                        <a href="https://t.me/aerospaceuniversity" target="_blank" rel="noopener noreferrer" className="telegram">
                             <div className="border-[#8E8E8E] border-2 p-2 rounded-full">
-                                <img className="w-[30px]" src={this.props.color["telegram"]} alt=""/>
+                                <img className="w-[30px]" src={this.props.color["telegram"]} alt="Telegram"/>
                             </div>
-                        </button>
-                        <button className="instagram">
+                        </a>
+                        <a href="https://instagram.com/aerospaceuniversity" target="_blank" rel="noopener noreferrer" className="instagram">
                             <div className="border-[#8E8E8E] border-2 p-2 rounded-full">
-                                <img className="w-[30px]" src={this.props.color["instagram"]} alt=""/>
+                                <img className="w-[30px]" src={this.props.color["instagram"]} alt="Instagram"/>
                             </div>
-                        </button>
-                        <button className="facebook">
+                        </a>
+                        <a href="https://facebook.com/aerospaceuniversity" target="_blank" rel="noopener noreferrer" className="facebook">
                             <div className="border-[#8E8E8E] border-2 p-2 rounded-full">
-                                <img className="w-[30px]" src={this.props.color["facebook"]} alt=""/>
+                                <img className="w-[30px]" src={this.props.color["facebook"]} alt="Facebook"/>
                             </div>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div className="footer-right-side md:w-[350px] my-auto flex md:justify-end order-2 md:order-3">
@@ -35,7 +35,7 @@ class Footer extends React.Component {
                         <div className="phone flex mb-[39px]">
                             <img src={this.props.color["phone"]} className="w-[30px] h-[30px] mr-3 m-auto" alt=""/>
                             <div>
-                                <p>(000)-000-00-00</p>
+                                <p>(057)-788-45-04</p>
                                 <p>(000)-000-00-00</p>
                             </div>
                         </div>

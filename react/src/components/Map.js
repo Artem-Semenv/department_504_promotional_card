@@ -4,7 +4,7 @@ class Map extends React.Component {
     render() {
         const iframeStyle = {
             border: "0",
-            width: "100%" // Распределение на всю ширину
+            width: "100%"
         };
 
         return (

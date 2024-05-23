@@ -4,8 +4,8 @@ class Conditions extends React.Component {
     render() {
 
         const listStyle = {
-            listStyleType: "none", // Убираем стандартный маркер списка
-            paddingLeft: "0" // Убираем отступ слева
+            listStyleType: "none",
+            paddingLeft: "0"
         };
 
         const listItemStyle = {
@@ -52,8 +52,8 @@ class Conditions extends React.Component {
                         <ul className="ml-2" style={listStyle}>
                             {items.map((item, index) => (
                                 <li className="m-5" key={index} style={listItemStyle}>
-                                    <span style={triangleStyle}></span> {/* Маркер */}
-                                    {item} {/* Содержимое элемента списка */}
+                                    <span style={triangleStyle}></span>
+                                    {item}
                                 </li>
                             ))}
                         </ul>
@@ -71,8 +71,8 @@ class Conditions extends React.Component {
                         <ul className="ml-2" style={listStyle}>
                             {items2.map((item, index) => (
                                 <li className="m-5" key={index} style={listItemStyle}>
-                                    <span style={triangleStyle}></span> {/* Маркер */}
-                                    {item} {/* Содержимое элемента списка */}
+                                    <span style={triangleStyle}></span>
+                                    {item}
                                 </li>
                             ))}
                         </ul>

@@ -7,13 +7,9 @@ class TimeLine extends React.Component {
             <section className="relative min-h-screen h-[1400px] flex flex-col justify-center overflow-hidden">
                 <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
                     <div className="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-16">
-
-
                         <div className="w-full max-w-4xl mx-auto">
-
                             <div
                                 className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
-
                                 <div
                                     className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                                     <div
@@ -32,7 +28,6 @@ class TimeLine extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-
                                 <div
                                     className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                                     <div
@@ -51,7 +46,6 @@ class TimeLine extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-
                                 <div
                                     className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                                     <div
@@ -70,7 +64,6 @@ class TimeLine extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-
                                 <div
                                     className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                                     <div
@@ -89,7 +82,6 @@ class TimeLine extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-
                                 <div
                                     className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                                     <div
@@ -108,7 +100,6 @@ class TimeLine extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-
                                 <div
                                     className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                                     <div
@@ -127,7 +118,6 @@ class TimeLine extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-
                                 <div
                                     className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                                     <div
@@ -146,7 +136,6 @@ class TimeLine extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-
                                 <div
                                     className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                                     <div
@@ -165,18 +154,11 @@ class TimeLine extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-
-
-
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </section>
-
-
         );
     }
 }
