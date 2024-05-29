@@ -59,11 +59,11 @@ class Specialties extends React.Component {
         };
 
         return (
-            <div id="specialties">
+            <div id="specialties" className="mr-18 ml-18 md:mr-28 md:ml-28">
                 <div className="text-center p-6">
-                    <p className="text-6xl font-bold"> {this.props.t("specialties")} </p>
+                    <p className="text-4xl  md:text-6xl font-bold"> {this.props.t("specialties")} </p>
                 </div>
-                <div className="mr-28 ml-28 text-2xl">
+                <div className="text-2xl">
                     <p className="m-6">{this.props.t("specialties_info_1")}</p>
                     <p className="m-6">{this.props.t("specialties_info_2")}</p>
                 </div>
@@ -71,7 +71,7 @@ class Specialties extends React.Component {
                     <div className="text-center text-red-600 text-3xl m-9">
                         {this.props.t("first_type_specialties")}
                     </div>
-                    <div className="mr-28 ml-28 text-2xl">
+                    <div className="text-2xl">
                         <p className="m-6">{this.props.t("first_type_info_1")}</p>
                         <p className="m-6">{this.props.t("first_type_info_2")}</p>
                         <ul className="ml-2" style={listStyle}>
@@ -85,10 +85,10 @@ class Specialties extends React.Component {
                     </div>
                 </div>
                 <div>
-                    <div className="text-center text-red-600 text-3xl m-9">
+                    <div className="text-center text-red-600 text-[22px] md:text-3xl m-9">
                         {this.props.t("second_type_specialties")}
                     </div>
-                    <div className="mr-28 ml-28 text-2xl">
+                    <div className="text-[20px] md:text-2xl">
                         <p className="m-6">{this.props.t("second_type_info_1")}</p>
                         <p className="m-6">{this.props.t("second_type_info_2")}</p>
                         <ul className="ml-2" style={listStyle}>
@@ -105,7 +105,7 @@ class Specialties extends React.Component {
                     <div className="text-center text-red-600 text-3xl m-9">
                         {this.props.t("third_type_specialties")}
                     </div>
-                    <div className="mr-28 ml-28 text-2xl">
+                    <div className="text-2xl">
                         <p className="m-6">{this.props.t("third_type_info_1")}</p>
                         <p className="m-6">{this.props.t("third_type_info_2")}</p>
                         <ul className="ml-2" style={listStyle}>

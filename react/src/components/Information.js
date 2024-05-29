@@ -77,18 +77,18 @@ class Inforamtion extends React.Component {
     render() {
         return (
             <article>
-                <div id="communication">
+                <div id="communication" className="">
                     <div className="text-center m-6">
-                        <p className="text-6xl font-bold">{this.props.t("contact")} </p>
+                        <p className="text-4xl md:text-6xl font-bold">{this.props.t("contact")} </p>
                     </div>
-                    <div className="mr-28 ml-28 mt-12 mb-12 text-2xl">
+                    <div className=" mt-12 mb-12 text-2xl">
                         <p className="m-6">{this.props.t("contact_info")}</p>
                     </div>
                 </div>
-                <div className="m-12 md:flex md:justify-evenly md:m-12">
-                    <div className='mx-14 pb-3 font-bold flex flex-col bg-[#FF3A3A]  rounded-2xl text-white justify-center md:h-[350px] md:w-[350px] lg:h-[350px] lg:w-[450px] xl:h-[450px] xl:w-[550px]'>
+                <div className="mb-15 mt-12 md:flex md:justify-evenly md:m-12">
+                    <div className='mb-8 md:mb-0  md:mx-14 pb-3 font-bold flex flex-col bg-[#FF3A3A]  rounded-2xl text-white justify-center md:h-[350px] md:w-[350px] lg:h-[350px] lg:w-[450px] xl:h-[450px] xl:w-[550px]'>
                         <p className="text-3xl text-center mb-2 mt-2">{this.props.t("touch")}</p>
-                        <p className="ml-12 mb-8 mt-8 mr-12 tracking-wider">{this.props.t("touch_info")}</p>
+                        <p className="ml-5 mr-5 mb-8 mt-8 md:ml-12 md:mr-12 tracking-wider">{this.props.t("touch_info")}</p>
                         <a className="ml-12 text-[17px]" href="https://khai.edu/ua/abiturientu/konsultacijnij-centr-hai/">{this.props.t("consulting")}</a>
                         <img alt=""/>
                     </div>

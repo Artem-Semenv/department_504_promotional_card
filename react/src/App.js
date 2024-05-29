@@ -34,6 +34,7 @@ class App extends React.Component {
             result_connection: "",
             color: {
                 "theme": "dark",
+                "text-color": "#DFDFDF",
                 "background": "bg-[#1D1D1D]",
                 "menu_background": "bg-white",
                 "search": "#8E8E8E",
@@ -71,22 +72,13 @@ class App extends React.Component {
     }
 
     sendDataForCalculate(data) {
-        // В этом методе вы можете отправить данные на сервер
-        // Например, используя axios.post
-        // axios.post('/calculate', data)
-        //     .then(response => {
-        //         // Обработка успешного ответа
-        //     })
-        //     .catch(error => {
-        //         // Обработка ошибки
-        //     });
         console.log('Отправляем данные:', data);
     }
 
     render() {
         const { t} = this.props;
 
-        return (<div  className={`${this.state.color["background"]} w-full text-[#8E8E8E]`}>
+        return (<div  className={`${this.state.color["background"]} w-full text-[${this.state.color["text-color"]}]`}>
             <Header t={t} changeColor={this.changeColor} color={this.state.color}  scrollToConditions={this.scrollToConditions}
                     changeLanguage={this.changeLanguage} language={this.state.language} />
             <div className={`${this.state.color["background"]} h-[50px]`}></div>
@@ -127,6 +119,7 @@ class App extends React.Component {
             this.setState({
                 color: {
                     "theme": "white",
+                    "text-color": "#2d2d2d",
                     "background": "bg-[#ffffff]",
                     "menu_background": "bg-black",
                     "search": "#7C7C7C",
@@ -147,6 +140,7 @@ class App extends React.Component {
             this.setState({
                 color: {
                     "theme": "dark",
+                    "text-color": "#DFDFDF",
                     "background": "bg-[#1D1D1D]",
                     "menu_background": "bg-white",
                     "search": "#8E8E8E",

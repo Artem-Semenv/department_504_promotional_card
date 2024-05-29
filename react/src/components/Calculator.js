@@ -130,42 +130,42 @@ class Calculator extends React.Component {
         return (<main>
             <div>
                 <div className="text-center m-8">
-                    <p className="text-6xl font-bold"> {this.props.t("chances")}</p>
+                    <p className="text-4xl md:text-6xl font-bold"> {this.props.t("chances")}</p>
                 </div>
 
-                <div className="mr-28 ml-28 text-2xl">
+                <div className="mr-18 ml-18 md:mr-28 md:ml-28 text-2xl">
                     <p className="m-6">{this.props.t("first_chances_info_1")}</p>
                 </div>
 
             </div>
             <form id="calculate" onSubmit={this.handleSubmit} className="flex flex-col items-center">
-                <p className="text-3xl font-bold mb-10">{this.props.t("scores")}</p>
+                <p className="text-2xl md:text-3xl font-bold mb-10">{this.props.t("scores")}</p>
                 {formError && <p className="text-red-500 mb-3">{formError}</p>}
                 <div className="md:flex ">
-                    <div className="md:mr-28 sm:m-auto">
-                        <div className="mb-5 w-[300px] ">
+                    <div className="md:mr-28 sm:m-auto w-[250px] md:w-[300px]">
+                        <div className="mb-5 ">
                             <input type="text" id="ukrainian" name="ukr" value={ukr} onChange={this.handleChange}
                                    className="h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                    placeholder={this.props.t("ukrainian")}  />
                         </div>
-                        <div className="mb-5 w-[300px]">
+                        <div className="mb-5">
                             <input type="text" id="foreignLanguage" name="eng" value={eng} onChange={this.handleChange} disabled={remainingFieldsDisabled && eng === ''}
                                    className="h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                    placeholder={this.props.t("foreign")} />
                         </div>
                     </div>
-                    <div>
-                        <div className="mb-5 w-[300px]">
+                    <div className=" w-[250px] md:w-[300px]">
+                        <div className="mb-5">
                             <input type="text" id="mathematics" name="math" value={math} onChange={this.handleChange}
                                    className="h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                    placeholder={this.props.t("math")}  />
                         </div>
-                        <div className="mb-5 w-[300px]">
+                        <div className="mb-5">
                             <input type="text" id="physics" name="field6" value={field6} onChange={this.handleChange} disabled={remainingFieldsDisabled && field6 === ''}
                                    className="h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                    placeholder={this.props.t("physics")} />
                         </div>
-                        <div className="mb-5 w-[300px]">
+                        <div className="mb-5">
                             <input type="text" id="ukrainianHistory" name="field7" value={field7} onChange={this.handleChange} disabled={remainingFieldsDisabled && field7 === ''}
                                    className="h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                    placeholder={this.props.t("history")} />

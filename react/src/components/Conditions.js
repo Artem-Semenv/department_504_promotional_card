@@ -38,16 +38,16 @@ class Conditions extends React.Component {
             ];
 
         return (
-            <div id="conditions">
+            <div id="conditions" className="mr-18 ml-18 md:mr-28 md:ml-28">
                 <div className="text-center m-6">
-                    <p className="text-6xl font-bold"> {this.props.t("conditions")}</p>
+                    <p className="text-4xl md:text-6xl font-bold"> {this.props.t("conditions")}</p>
                 </div>
 
                 <div>
                     <div className="text-center text-red-600 text-3xl m-9">
                         {this.props.t("first_type_conditions")}
                     </div>
-                    <div className="mr-28 ml-28 text-2xl">
+                    <div className="text-2xl">
                         <p className="m-6">{this.props.t("first_conditions_info_1")}</p>
                         <ul className="ml-2" style={listStyle}>
                             {items.map((item, index) => (
@@ -66,7 +66,7 @@ class Conditions extends React.Component {
                     <div className="text-center text-red-600 text-3xl m-9">
                         {this.props.t("second_type_conditions")}
                     </div>
-                    <div className="mr-28 ml-28 text-2xl">
+                    <div className="text-2xl">
                         <p className="m-6">{this.props.t("second_conditions_info_1")}</p>
                         <ul className="ml-2" style={listStyle}>
                             {items2.map((item, index) => (
